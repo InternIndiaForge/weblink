@@ -98,6 +98,17 @@ hr {
   animation-play-state: paused;
 }
 
+.social-box .box a {
+     margin: 0 10px;
+     font-size: 24px;
+     color: #fff;
+     text-decoration: none;
+    }
+    .social-box .box a:hover {
+        color: #00aced; /* Change this to the desired hover color */
+    }   
+
+
 .invitation-card h3 {
   margin: 10px 0;
   text-align: center;
