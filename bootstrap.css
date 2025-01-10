@@ -74,40 +74,71 @@ hr {
 }
 
 
-
 .invitation-card {
-  width: 260x;
-  height: 60px;
+  width: 300px; /* Adjusted for better aesthetics */
+  height: 80px; /* Adjusted for better aesthetics */
   background: linear-gradient(135deg, #ff6f61, #ff9f7f);
   color: #fff;
   border-radius: 15px;
   position: absolute;
   top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  animation: moveLeftRight 10s linear infinite, colorChange 5s linear infinite;
+  animation: gradientMove 5s ease infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .invitation-card:hover {
-  animation-play-state: paused;
+  transform: translate(-50%, -50%) scale(1.1); /* Scales the card on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* More prominent shadow */
 }
 
 .invitation-card h3 {
-  margin: 10px 0;
+  margin: 5px 0;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px; /* Adds some style */
+  font-weight: bold;
+  animation: textGlow 3s ease infinite; /* Adds glowing text animation */
 }
 
 .invitation-card p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: center;
   margin: 5px;
+  opacity: 0.9;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+  0% {
+    background: linear-gradient(135deg, #ff6f61, #ff9f7f);
+  }
+  50% {
+    background: linear-gradient(135deg, #ff9f7f, #ffc5b3);
+  }
+  100% {
+    background: linear-gradient(135deg, #ff6f61, #ff9f7f);
+  }
+}
+
+/* Text Glow Animation */
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff6f61, 0 0 15px #ff6f61, 0 0 20px #ff9f7f;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff6f61, 0 0 30px #ff9f7f, 0 0 40px #ff9f7f;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff6f61, 0 0 15px #ff6f61, 0 0 20px #ff9f7f;
+  }
 }
 
 @keyframes moveLeftRight {
