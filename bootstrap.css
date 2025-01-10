@@ -98,19 +98,6 @@ hr {
   animation-play-state: paused;
 }
 
-.social-box .box a {
-    margin: 0 10px;
-    font-size: 24px;
-    color: #fff; /* Default color of the icons */
-    text-decoration: none;
-}
-
-.social-box .box a:hover {
-    color: #000; /* Black color on hover */
-}
-
-
-
 .invitation-card h3 {
   margin: 10px 0;
   text-align: center;
