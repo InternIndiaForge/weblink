@@ -99,14 +99,16 @@ hr {
 }
 
 .social-box .box a {
-     margin: 0 10px;
-     font-size: 24px;
-     color: #fff;
-     text-decoration: none;
-    }
-    .social-box .box a:hover {
-        color: #00aced; /* Change this to the desired hover color */
-    }   
+    margin: 0 10px;
+    font-size: 24px;
+    color: #fff; /* Default color of the icons */
+    text-decoration: none;
+}
+
+.social-box .box a:hover {
+    color: #000; /* Black color on hover */
+}
+
 
 
 .invitation-card h3 {
