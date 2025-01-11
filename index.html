@@ -127,8 +127,92 @@ At InternIndiaForge,<br> we are dedicated to empowering individuals and business
     </section>
     <!-- end slider section -->
   </div>
+  <!-- apply for internship button started-->
+ <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #f0f2f5;
+      font-family: 'Arial', sans-serif;
+    }
 
+    .button-wrapper {
+      position: relative;
+    }
 
+    .apply-button {
+      padding: 20px 40px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(45deg, #4776E6, #8E54E9);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 6px 30px -10px #8E54E9;
+    }
+
+    .apply-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 40px -10px #8E54E9;
+    }
+
+    .apply-button::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: rotate(45deg);
+      transition: all 0.5s ease;
+    }
+
+    .apply-button:hover::before {
+      left: 100%;
+    }
+
+    .pulse {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      border: 2px solid rgba(142, 84, 233, 0.5);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1.3);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="button-wrapper">
+    <div class="pulse"></div>
+    <a href="Intern.html" class="apply-button">
+      Apply for Internship ✨
+    </a>
+  </div>
+</body>
+  <!-- apply for internship button ended -->
+  
   <!-- about section -->
 
   <section class="about_section layout_padding">
