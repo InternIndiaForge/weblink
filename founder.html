@@ -1,266 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aditya Sangale - Portfolio</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-        }
-        .section-title {
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .skills-progress {
-            margin-bottom: 15px;
-        }
-        .card-project {
-            margin-bottom: 20px;
-            transition: transform 0.3s;
-        }
-        .card-project:hover {
-            transform: scale(1.05);
-        }
-        .contact-info .bi {
-            font-size: 1.5rem;
-            margin-right: 10px;
-            color: #007bff;
-        }
-        .linkedin-post-card {
-            margin-bottom: 20px;
-        }
-        .linkedin-post-card iframe {
-            width: 100%;
-            height: 300px;
-            border: none;
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Aditya Sangale</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#linkedin-posts">LinkedIn Posts</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="bg-primary text-white text-center py-5 mt-5">
-        <div class="container">
-            <img src="my-profile-img.jpeg" class="rounded-circle mb-3" width="200" alt="Profile Picture">
-            <h1>Aditya Sangale</h1>
-            <p class="lead">Web Developer | Blockchain Enthusiast | Tech Innovator</p>
-        </div>
-    </section>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Aditya Sangale's Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.png" rel="icon">
+  <link href="apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="founder.css" rel="stylesheet">
+
+  <style>
+    /* Custom styles for hover effects and responsiveness */
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .logo h1:hover {
+      transform: scale(1.1);
+    }
+
+    .post-card {
+      margin-bottom: 20px;
+      border-radius: 15px;
+      border: 1px solid #ddd;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 350px;
+      margin: auto;
+    }
+
+    .post-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="my-profile-img.jpeg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="founder.html" class="logo d-flex align-items-center justify-content-center" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(45deg, #ff7e5f, #feb47b); padding: 20px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
+      <h1 class="sitename" style="font-size: 2.5em; margin-bottom: 10px; color: #fff; font-family: 'Arial', sans-serif; letter-spacing: 2px; text-transform: uppercase;">
+        Aditya Sangale
+      </h1>
+      <p class="intro" style="font-size: 18px; text-align: center; color: #fff; font-family: 'Segoe UI', sans-serif; letter-spacing: 1px;">
+        CEO and Founder of <strong>internindiaforge.ltd</strong><br>
+        Specializing in Blockchain | Event Coordinator | Freelancer | Trainer | Good Learner
+      </p>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://www.instagram.com/its_adi_sangale_here/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://github.com/ADISANGALEHERE" class="github" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/aditya-sangale/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://wa.me/919834462031" class="whatsapp" target="_blank"><i class="bi bi-whatsapp"></i></a>
+      <a href="mailto:adityasangale2003@gmail.com" class="email"><i class="bi bi-envelope"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        <li><a href="#linkedin-posts-section"><i class="bi bi-emoji-sunglasses navicon"></i> Achievements And Works</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <img src="hero-bg.jpg" alt="" data-aos="fade-in" class="">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Aditya Namdev Sangale</h2>
+        <p>I'm <span class="typed" data-typed-items="Designer, Web Developer, Freelancer, Trainer , Computer Science Engineer">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+    </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>Aditya Sangale is a dynamic Computer Science and Engineering student specializing in IoT, Cybersecurity, and Blockchain at ADCET Ashta, with a CGPA of 7.75 (till the 7th semester). He is the CEO and Founder of InternIndiaForge Ltd., blending entrepreneurship with professional experience as a web developer and freelancer. Aditya has been selected for a 5-month internship at Qspiders, Wakad, through his college campus drive, where he is advancing his software development skills. Recognized as an Environmental Ambassador for 2024-25 by the Ashta Village for his contributions to environmental initiatives through the NSS, he has led over 40 impactful events, including tree plantations and awareness drives. His technical portfolio features projects like Campaign DApp, Blood Bank DApp, and Travel Planner, reflecting his expertise in blockchain and full-stack development while showcasing his leadership and commitment to community betterment.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="my-profile-img.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>CEO at InternIndiaForge Ltd. | Web Developer | Client-Focused Solutions Expert</h2>
+            <p class="fst-italic py-3">
+              A visionary Computer Science and Engineering student, CEO of InternIndiaForge Ltd., and an accomplished web developer with expertise in IoT, Cybersecurity, and Blockchain. He is a dedicated leader, recognized as an Environmental Ambassador, with a proven record of impactful projects and community contributions.
+            </p>
             <div class="row">
-                <div class="col-lg-6">
-                    <img src="my-profile-img.jpg" class="img-fluid mb-3" alt="About Me Image">
-                    <p>Computer Science Engineering student specializing in IoT, Cybersecurity, and Blockchain. CEO of InternIndiaForge Ltd., with expertise in web development and blockchain technologies.</p>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="list-unstyled">
-                        <li><strong>Age:</strong> 21</li>
-                        <li><strong>Location:</strong> Maharashtra, India</li>
-                        <li><strong>Email:</strong> adityasangale2003@gmail.com</li>
-                        <li><strong>Phone:</strong> +91 9834462031</li>
-                    </ul>
-                </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>18 October 2003</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.internindiaforge.ltd</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+919834462031</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Maharashtra, India</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>B.Tech Pursuing</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>adityasangale2003@example.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
             </div>
+            <p class="py-3">
+              Aditya Sangale is a 21-year-old aspiring tech professional pursuing a B.Tech in Computer Science and Engineering. Based in Maharashtra, India, he is the CEO of InternIndiaForge Ltd., a web developer, and a freelancer offering client-focused digital solutions. Connect with him at adityasangale2003@example.com or explore his work at www.internindiaforge.ltd.
+            </p>
+          </div>
         </div>
+      </div>
+    </section><!-- /About Section -->
+
+    <!-- Slider Section -->
+    <section id="slider" class="slider section">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="adi.png" class="d-block w-100" alt="Aditya Image">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="bg-light py-5">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="skills-progress">
-                        <h5>Web Development</h5>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 90%">90%</div>
-                        </div>
-                    </div>
-                    <div class="skills-progress">
-                        <h5>Blockchain</h5>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 75%">75%</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="skills-progress">
-                        <h5>Python</h5>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 85%">85%</div>
-                        </div>
-                    </div>
-                    <div class="skills-progress">
-                        <h5>Digital Marketing</h5>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 80%">80%</div>
-                        </div>
-                    </div>
-                </div>
+    <section id="skills" class="skills section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row skills-content skills-animation">
+          <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
             </div>
+            <div class="progress">
+              <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>DBMS</span> <i class="val">65%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>BlockChain Basics</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>Python Full Stack</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>Digital Marketing</span> <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>Project Management</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>Social Media Handling</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>Total Quality Management and Assurance</span> <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>Cybersecurity</span> <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>Prompt Learning and Implementation</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>Machine Learning, Data Analytics (Power BI)</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>MERN/MEAN STACK</span> <i class="val">65%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>Event Coordination</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>Leadership</span> <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </section><!-- /Skills Section -->
 
     <!-- Projects Section -->
-    <section id="projects" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card card-project">
-                        <img src="campaign-dapp.jpg" class="card-img-top" alt="Campaign DApp">
-                        <div class="card-body">
-                            <h5 class="card-title">Campaign DApp</h5>
-                            <p class="card-text">Blockchain platform for NGO campaign management</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-project">
-                        <img src="ecommerce-website.jpg" class="card-img-top" alt="E-commerce Website">
-                        <div class="card-body">
-                            <h5 class="card-title">E-commerce Website</h5>
-                            <p class="card-text">WordPress WooCommerce site for Gopal Books</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-project">
-                        <img src="blood-bank-dapp.jpg" class="card-img-top" alt="Decentralized Blood Bank">
-                        <div class="card-body">
-                            <h5 class="card-title">Decentralized Blood Bank</h5>
-                            <p class="card-text">Blockchain-based blood donation system</p>
-                        </div>
-                    </div>
-                </div>
+    <section class="py-5">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>🚀 My Creative Projects</h2>
+        <div class="row gy-4">
+          <!-- Project 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-lg card-animate">
+              <div class="card-header">Creating Campaigns for NGOs Using DApp</div>
+              <div class="card-body">
+                <p>
+                  📅 <strong>Duration:</strong> Sep 2024 - Dec 2024 <br>
+                  🏫 <strong>Associated with:</strong> Daivat Foundation, Maharashtra
+                </p>
+                <ul>
+                  <li>🌐 A blockchain-based platform for NGOs to create and manage campaigns.</li>
+                  <li>📊 Includes a transparent dashboard for public donations.</li>
+                  <li>🌲 Sample campaigns: tree plantations, food donations, disaster relief.</li>
+                </ul>
+                <a href="#" target="_blank" class="btn-view">View Details</a>
+              </div>
             </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-lg card-animate">
+              <div class="card-header">E-commerce Website for Gopal Books</div>
+              <div class="card-body">
+                <p>
+                  📅 <strong>Duration:</strong> May 2024 - Aug 2024 <br>
+                  🏢 <strong>Client:</strong> Gopal Books, gopalbookshop.co.in
+                </p>
+                <ul>
+                  <li>📚 Built an e-commerce site using WordPress WooCommerce from scratch.</li>
+                  <li>🎨 Customized the theme to reflect Gopal Books' branding.</li>
+                  <li>🔍 Integrated search filters, payment gateways, and product catalogs.</li>
+                </ul>
+                <a href="https://gopalbookshop.co.in" target="_blank" class="btn-view">View Live Site</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-lg card-animate">
+              <div class="card-header">Automated Certificate Generation</div>
+              <div class="card-body">
+                <p>
+                  📅 <strong>Duration:</strong> Jul 2024 - Nov 2024 <br>
+                  🏫 <strong>Associated with:</strong> ADCET, ASHTA
+                </p>
+                <ul>
+                  <li>🖥 Accepts Excel sheets with participant details.</li>
+                  <li>🎨 Generates certificates using Python Pillow.</li>
+                  <li>✉️ Distributes certificates via Flask-Mail.</li>
+                </ul>
+                <a href="#" target="_blank" class="btn-view">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-lg card-animate">
+              <div class="card-header">Decentralized Blood Bank</div>
+              <div class="card-body">
+                <p>
+                  📅 <strong>Duration:</strong> Apr 2024 - Jul 2024 <br>
+                  🏫 <strong>Associated with:</strong> ADCET, ASHTA
+                </p>
+                <ul>
+                  <li>🔗 Blockchain-based blood donation system.</li>
+                  <li>💳 Walletless Blockchain for simplicity.</li>
+                  <li>🔒 Secure & transparent transaction records.</li>
+                </ul>
+                <a href="#" target="_blank" class="btn-view">View Details</a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- LinkedIn Posts Section -->
-    <section id="linkedin-posts" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">LinkedIn Posts</h2>
-            <div class="row">
-                <div class="col-md-4 linkedin-post-card">
-                    <div class="card">
-                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7270365052719812608" allowfullscreen title="Embedded post"></iframe>
-                    </div>
-                </div>
-                <div class="col-md-4 linkedin-post-card">
-                    <div class="card">
-                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7261335435161784320" allowfullscreen title="Embedded post"></iframe>
-                    </div>
-                </div>
-                <div class="col-md-4 linkedin-post-card">
-                    <div class="card">
-                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7248291310892183552" allowfullscreen title="Embedded post"></iframe>
-                    </div>
-                </div>
+    <section id="linkedin-posts-section">
+      <div class="container">
+        <h2>Achievements and Works</h2>
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-md-6">
+            <div class="card post-card">
+              <div class="card-body">
+                <h4 class="card-title">Post 1</h4>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7270365052719812608" height="300" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              </div>
             </div>
-            <div class="row">
-                <div class="col-md-4 linkedin-post-card">
-                    <div class="card">
-                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7246010400368971779" allowfullscreen title="Embedded post"></iframe>
-                    </div>
-                </div>
-                <div class="col-md-4 linkedin-post-card">
-                    <div class="card">
-                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7216321250875334657" allowfullscreen title="Embedded post"></iframe>
-                    </div>
-                </div>
-                <div class="col-md-4 linkedin-post-card">
-                    <div class="card">
-                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7202628137984094208" allowfullscreen title="Embedded post"></iframe>
-                    </div>
-                </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-6">
+            <div class="card post-card">
+              <div class="card-body">
+                <h4 class="card-title">Post 2</h4>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7270365052719812608" height="300" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              </div>
             </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-6">
+            <div class="card post-card">
+              <div class="card-body">
+                <h4 class="card-title">Post 3</h4>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7261335435161784320" height="300" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-md-6">
+            <div class="card post-card">
+              <div class="card-body">
+                <h4 class="card-title">Post 4</h4>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7248291310892183552" height="300" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col-md-6">
+            <div class="card post-card">
+              <div class="card-body">
+                <h4 class="card-title">Post 5</h4>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7246010400368971779" height="300" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-md-6">
+            <div class="card post-card">
+              <div class="card-body">
+                <h4 class="card-title">Post 6</h4>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7216321250875334657" height="300" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="col-md-6">
+            <div class="card post-card">
+              <div class="card-body">
+                <h4 class="card-title">Post 7</h4>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7202628137984094208" height="300" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="col-md-6">
+            <div class="card post-card">
+              <div class="card-body">
+                <h4 class="card-title">Post 8</h4>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7193161119153213441" height="300" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="col-md-6">
+            <div class="card post-card">
+              <div class="card-body">
+                <h4 class="card-title">Post 9</h4>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7193150078788780032" height="300" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="col-md-6">
+            <div class="card post-card">
+              <div class="card-body">
+                <h4 class="card-title">Post 10</h4>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7184944580734181376" height="300" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 11 -->
+          <div class="col-md-6">
+            <div class="card post-card">
+              <div class="card-body">
+                <h4 class="card-title">Post 11</h4>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7182052921872683008" height="300" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 12 -->
+          <div class="col-md-6">
+            <div class="card post-card">
+              <div class="card-body">
+                <h4 class="card-title">Post 12</h4>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7158732384236892161" height="300" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 13 -->
+          <div class="col-md-6">
+            <div class="card post-card">
+              <div class="card-body">
+                <h4 class="card-title">Post 13</h4>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7146817136060018688" height="300" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 14 -->
+          <div class="col-md-6">
+            <div class="card post-card">
+              <div class="card-body">
+                <h4 class="card-title">Post 14</h4>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7134439546087194624" height="300" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="row">
-                <div class="col-md-6 contact-info">
-                    <div class="mb-3">
-                        <i class="bi bi-envelope"></i>
-                        adityasangale2003@gmail.com
-                    </div>
-                    <div class="mb-3">
-                        <i class="bi bi-phone"></i>
-                        +91 9834462031
-                    </div>
-                    <div class="mb-3">
-                        <i class="bi bi-geo-alt"></i>
-                        Maharashtra, India
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Your Name">
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Your Email">
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <div class="container">
-            <p>&copy; 2024 Aditya Sangale. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/aditya-sangale/" class="text-white mx-2"><i class="bi bi-linkedin"></i></a>
-                <a href="https://github.com/ADISANGALEHERE" class="text-white mx-2"><i class="bi bi-github"></i></a>
-                <a href="https://www.instagram.com/its_adi_sangale_here/" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Summary</h3>
+            <div class="resume-item pb-0">
+              <h4>Aditya Sangale</h4>
+              <p><em>Visionary Computer Science and Engineering student specializing in IoT, Cybersecurity, and Blockchain, with a strong entrepreneurial spirit as the CEO of InternIndiaForge Ltd. Experienced in web development, blockchain projects, and leading community-focused initiatives.</em></p>
+              <ul>
+                <li>Maharashtra, India</li>
+                <li>+91 9834462031</li>
+                <li>adityasangale2003@example.com</li>
+              </ul>
             </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-</body>
-</html>
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor of Engineering in Computer Science and Engineering (IoT, Cybersecurity, and Blockchain)</h4>
+              <h5>2021 - 2025</h5>
+              <p><em>Annasaheb Dange College of Engineering and Technology (ADCET), Ashta</em></p>
+              <p>◦ CGPA: 7.75 (Till 7th Semester)</p>
+            </div>
+            <div class="resume-item
