@@ -30,9 +30,10 @@
   <style>
     /* Custom styles for the new theme */
     body {
-      background-color: #f8f9fa;
-      color: #343a40;
+      background-color: #f8f9fa; /* Light background color */
+      color: #343a40; /* Dark text color */
       font-family: 'Roboto', sans-serif;
+      overflow-x: hidden; /* Prevent horizontal scroll */
     }
 
     .header {
@@ -42,36 +43,43 @@
       position: fixed;
       width: 100%;
       z-index: 1000;
+      transition: background 0.3s;
     }
 
     .header .logo {
       font-size: 2em;
       font-weight: bold;
+      text-align: center;
     }
 
     .hero {
-      background: url('hero-bg.jpg') no-repeat center center/cover;
-      height: 100vh;
+      background: url('hero-bg.jpg') no-repeat center center/cover; /* Ensure the image path is correct */
+      height: 100vh; /* Full height */
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
+      color: #fff; /* White text color */
       text-align: center;
+      position: relative;
     }
 
     .hero h2 {
       font-size: 3em;
       margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
     .hero p {
       font-size: 1.5em;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
 
     .post-card {
       border-radius: 15px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .post-card:hover {
@@ -86,10 +94,40 @@
       border-radius: 5px;
       padding: 10px 20px;
       transition: background 0.3s;
+      text-transform: uppercase;
+      font-weight: bold;
     }
 
     .btn-view:hover {
       background: linear-gradient(135deg, #2193b0, #6dd5ed);
+    }
+
+    /* Scroll to top button */
+    .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #6d83f3;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 1000;
+    }
+
+    .scroll-top.active {
+      opacity: 1;
+    }
+
+    .scroll-top i {
+      font-size: 24px;
     }
   </style>
 </head>
@@ -570,6 +608,29 @@
 
   <!-- Main JS File -->
   <script src="founder.js"></script>
+
+  <script>
+    // Scroll to top button functionality
+    const scrollTopBtn = document.createElement('div');
+    scrollTopBtn.classList.add('scroll-top');
+    scrollTopBtn.innerHTML = '<i class="bi bi-arrow-up"></i>';
+    document.body.appendChild(scrollTopBtn);
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add('active');
+      } else {
+        scrollTopBtn.classList.remove('active');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 
 </body>
 
