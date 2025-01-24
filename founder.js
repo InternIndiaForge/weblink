@@ -17,12 +17,13 @@ AOS.init({
     once: true, // Whether animation should happen only once - while scrolling down
 });
 
-// Optional: Add a scroll-to-top button functionality
+// Scroll to top button functionality
 const scrollTopBtn = document.createElement('div');
 scrollTopBtn.classList.add('scroll-top');
 scrollTopBtn.innerHTML = '<i class="bi bi-arrow-up"></i>';
 document.body.appendChild(scrollTopBtn);
 
+// Show or hide the scroll-to-top button based on scroll position
 window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
         scrollTopBtn.classList.add('active');
@@ -31,9 +32,20 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Scroll to top when the button is clicked
 scrollTopBtn.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
+});
+
+// Optional: Add a dynamic background color change on scroll
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    if (window.scrollY > 50) {
+        header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'; // Darker background on scroll
+    } else {
+        header.style.backgroundColor = 'transparent'; // Original background
+    }
 });
